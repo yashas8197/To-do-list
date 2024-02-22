@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="container">
+  <h1 class="mt-4">To-Do List</h1>
+  <form id="todoListForm">
+    <div class="my-4">
+      <label>Enter Task:</label>
+      <input placeholder="Enter a Task" id="taskInput" class="form-control" />
+    </div>
+    <div class="my-4">
+      <label>Select Day:</label>
+      <select id="selectDay" class="form-select">
+        <option value="Today">Today</option>
+        <option value="Tomorrow">Tomorrow</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Task</button>
+  </form>
+
+  <div class="d-flex justify-content-between mb-5">
+    <div>
+      <h2>Today's Tasks:</h2>
+      <ul class="list-group" id="todaysList"></ul>
+    </div>
+    <div>
+      <h2>Tomorrow's Tasks:</h2>
+      <ul class="list-group" id="tomorrowsList"></ul>
+    </div>
+  </div>
+
+  <h2>Task Summary</h2>
+  <div id="taskSummary">
+    <p>Tasks Today: <span id="todayTaskCount">0</span> | Tasks Tommorrow: <span id="tommorowTaskCount">0</span></p>
+    <p id="taskSummaryMessage"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
